@@ -4,9 +4,117 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Not To Do List</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- tip title -->
+        <div class="row">
+          <div class="col mt-5 text-center">
+            <h1>Not to do List</h1>
+          </div>
+        </div>
+
+        <!-- form -->
+        <form action="" class="mt-5 p-3 py-4 border rounded shadow-sm bg-white">
+          <div class="row g-2">
+            <div class="col-md-5">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Coding"
+                name="task"
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="hours"
+                name="hr"
+              />
+            </div>
+            <div class="col-md-4">
+              <div class="d-grid">
+                <button class="btn btn-primary">Add task</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- table area -->
+        <div class="row mt-4 pt-1">
+          <!-- entry list -->
+          <div class="col-md">
+            <h3 class="text-center">Entry List</h3>
+            <hr />
+            <table class="border table table-striped table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>4hrs</td>
+                  <td class="text-center">
+                    <button class="btn btn-danger">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <button class="btn btn-success">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- bad list -->
+          <div class="col-md">
+            <h3 class="text-center">Bad List</h3>
+            <hr />
+            <table class="border table table-striped table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>4hrs</td>
+                  <td class="text-center">
+                    <button class="btn btn-danger">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <button class="btn btn-success">
+                      <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert alert-info">You could have hrs</div>
+          </div>
+        </div>
+
+        <!-- toss time -->
+        <div class="alert alert-info">
+          Total hrs per week allocated = 100hrs
+        </div>
+      </div>
+    </div>
+    <!--wrapper-->
     <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

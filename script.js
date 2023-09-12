@@ -1,6 +1,7 @@
 let taskList = [];
 
 const entryElm = document.getElementById("entry");
+const badElm = document.getElementById("bad");
 const badHrElm = document.getElementById("badHr");
 const totalHrElm = document.getElementById("totalHr");
 
@@ -121,6 +122,7 @@ const switchTask = (id, type) => {
   });
   displayEntryTask();
   displayBadTask();
+  total();
 };
 
 const handleOnDelete = (id) => {

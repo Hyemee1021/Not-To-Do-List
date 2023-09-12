@@ -3,10 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontaweson cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./style.css" />
-    <title>Not To Do List</title>
+
+    <title>NTDL</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- top title  -->
+        <div class="row g-2">
+          <div class="col mt-5 text-center">
+            <h1>Not to do list</h1>
+          </div>
+        </div>
+
+        <!-- form  -->
+        <form
+          onsubmit="handleOnSubmit(this)"
+          action="javascript:void(0)"
+          class="mt-5 border p-5 rounded shadow-lg bg-transparent"
+        >
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Coding.."
+                aria-label="First name"
+                name="task"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="number"
+                min="1"
+                class="form-control"
+                placeholder="23"
+                aria-label="Last name"
+                name="hr"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <div class="d-grid">
+                <button class="btn btn-primary">Add Task</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- table area  -->
+        <div class="row mt-5 pt-2">
+          <!-- 1. entry list -->
+          <div class="col-md">
+            <h3 class="text-center">Task Entry List</h3>
+            <hr />
+            <table class="table table-striped table-hover border opacity">
+              <tbody id="entry"></tbody>
+            </table>
+          </div>
+
+          <!-- 2. bad list  -->
+          <div class="col-md">
+            <h3 class="text-center">Bad List</h3>
+            <hr />
+            <table class="table table-striped table-hover border opacity">
+              <tbody id="bad"></tbody>
+            </table>
+            <div class="alert alert-info">
+              You could have save = <span id="badHr">0</span>hr
+            </div>
+          </div>
+        </div>
+
+        <!-- toat time allocated -->
+        <div class="alert alert-info">
+          Total hrs per week allocated = <span id="totalHr">0</span>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

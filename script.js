@@ -88,6 +88,9 @@ const displayBadTask = () => {
     </td>
     </tr>`;
   });
+  const ttlBadHr = badListOnly.reduce((acc, item) => acc + item.hr, 0);
+
+  badHrElm.innerText = ttlBadHr;
 
   badElm.innerHTML = str;
 };
